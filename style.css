@@ -1,0 +1,55 @@
+/* 
+main bookshelf border color -- #4b3d2d
+behind the 'books' color -- #8b5b29
+'book' color -- #d9cba0
+text color -- #c65d3b
+ */
+
+ :root {
+    --main-bg-color: #4b3d2d;
+    --second-bg-color: #8b5b29;
+    --book-color: #d9cba0;
+ }
+
+body {
+   background-color: var(--main-bg-color);
+}
+.bodyContainer {
+   width: 100%;
+   height: auto;
+   border: 1px solid white;
+}
+
+
+
+.bodyTop {
+   /* border: 1px solid red; */
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
+}
+.bodyTop > button {
+   width: 300px;
+   height: auto;
+   color: var(--book-color);
+   background-color: var(--second-bg-color);
+}
+
+
+
+.bodyMid {
+   background-color: var(--second-bg-color);
+   margin: 10px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+.book {
+   width: 22.5%;
+   height: 22.5%;
+   background-color: var(--book-color);
+   text-align: center;
+   margin: 5px;
+}
