@@ -17,3 +17,18 @@ ADD a way to delete books from the library
 ADD way to change book from Not read to Read
     Switch on card to swap between choices
         Check box change the color of READ (red= Not green= Read)
+
+This will be a blueprint for what I want the 'Book' object to look like
+            <div class="book">
+                <h3 class="title">The Hobbit</h3>
+                <h4 class="author">J.R.R Tolkein</h4>
+                <p class="pages">Pages: 369</p>
+                <p class="read">Read</p>
+                <div class="bookBottom">
+                    <button>Delete</button>
+                    <select name="read" id="read">
+                        <option value="read">Read</option>
+                        <option value="not">Not Read</option>
+                    </select>
+                </div>
+            </div>

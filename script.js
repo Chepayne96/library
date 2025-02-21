@@ -1,9 +1,10 @@
 const bodyMid = document.querySelector('.bodyMid');
 
 
-
+// Array for 'Book'
 const myLibrary = [];
 
+// Book object 
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -11,6 +12,7 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+// Book constructor, then add to the 'myLibrary'
 function addBookToLibrary(title, author, pages, read){
     let book = new Book(title, author, pages, read);
     myLibrary.push(book);
