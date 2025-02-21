@@ -45,6 +45,7 @@ body {
    display: flex;
    flex-direction: row;
    justify-content: center;
+   flex-flow: wrap;
 }
 .book {
    width: 22.5%;
