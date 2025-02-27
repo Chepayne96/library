@@ -14,11 +14,25 @@
     <div class="bodyContainer">
         
         <div class="bodyTop">
-            <button type="button">New Book</button>
+            <button type="button" class="newBookBtn">New Book</button>
         </div>
 
         <div class="bodyMid">
+            <dialog class="modal" close>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title">
 
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author">
+
+                <label for="pages">Pages:</label>
+                <input type="number" name="pages" id="pages">
+
+                <label for="read">Have you read:</label>
+                <input type="checkbox" name="read" id="read" value="Read">
+
+                <button type="submit" formmethod="dialog" class="close">Add Book</button>
+            </dialog>
         </div>
 
     </div>

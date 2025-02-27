@@ -1,5 +1,14 @@
 const bodyMid = document.querySelector('.bodyMid');
+const newBookBtn = document.querySelector('.newBookBtn');
+const modal = document.querySelector('.modal');
+const addBtn = document.querySelector('.close');
+const deleteBTN = document.querySelectorAll('.deleteBTN');
 
+// Elements from modal for the book
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
+const pages = document.querySelector('#pages');
+const read = document.querySelector('#read');
 
 // Array for 'Book'
 const myLibrary = [];
@@ -52,12 +61,46 @@ function showBooks(){
         bookContainer.appendChild(bookBottom);
 
         let deleteBtn = document.createElement('button');
-        deleteBtn.classList.add('deleteBtn');
+        deleteBtn.classList.add('deleteBTN');
         deleteBtn.textContent = 'Delete';
         bookBottom.appendChild(deleteBtn);
     })
 }
 
-addBookToLibrary('cheyenne', 'cheyenne', 1, 'read');
+// Open modal by changing the display to flex for style reasons
+newBookBtn.onclick = function() {
+    modal.style.display = 'flex';
+}
 
+// Btn on bottom of modal to close modal and add the book to library.
+addBtn.onclick = () => {
+    // Gather the info from modal input's
+    let titleInput = title.value;
+    let authorInput = author.value;
+    let pagesInput = pages.value;
+    if (read.value != 'Read') {
+        read.value = 'Not Read';
+    }
+    let readInput = read.value;
+
+    // add book based upon the info in modal
+    addBookToLibrary(titleInput, authorInput, pagesInput, readInput);
+
+    // close modal and show new book 
+    modal.style.display = 'none';
+    showBooks();
+
+}
+
+
+deleteBTN.forEach((btn) => {
+    btn.onclick = (event) => {
+        let test = event.target;
+        console.log(test);
+    }
+})
+
+
+addBookToLibrary('cheyenne', 'payne', 29, 'read');
 showBooks()
+

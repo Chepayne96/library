@@ -54,3 +54,10 @@ body {
    text-align: center;
    margin: 5px;
 }
+
+
+.modal {
+   display: none;
+   flex-direction: column;
+   background-color: var(--book-color);
+}
